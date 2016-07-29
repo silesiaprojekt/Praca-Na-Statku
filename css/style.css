@@ -12,6 +12,10 @@ body {
 .wraper {
     min-width: 100%;
     min-height: 100%;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -31,11 +35,16 @@ h2 {
     font-weight: 400;
     font-size: 28px;
 }
+p {
+    font-family: 'Titillium Web', sans-serif;
+    color: black;
+}
 .stamp {
     padding: 3px;
     position: fixed;
-    top: 0px;
-    left: 30%;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 svg {
     padding: 5px;
@@ -100,4 +109,22 @@ footer img:hover {
 }
 #waves:hover {
     fill: transparent;
+}
+.description {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: white;
+    opacity: 0.9;
+}
+.description h1 {
+    color: black;
+}
+.modify {
+    display: block;
+    transition: all 1s;
 }
