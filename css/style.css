@@ -7,32 +7,69 @@ body {
     padding: 0;
     min-width: 100%;
     min-height: 100%;
-    background-color: #0086b3;
+    background-color: #4E6680;
+    font-family: 'Open Sans', sans-serif;
 }
 .wraper {
-    background-color: white;
     max-width: 970px;
-    min-height: 400px;
-    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.board {
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+    max-width: 100%;
+    margin: 10px;
 }
 header {
-    min-height: 60px;
-    min-width: 100%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height: 50px;
+    margin: 10px;
+    background-color: white;
+
 }
 nav {
     min-height: 100%;
     min-width: 50%;
     display: inline-block;
 }
+.buttons {
+    width: 100%;
+    height: 50px;
+}
 .btn {
-    min-height: 40px;
-    min-width: 80px;
-    margin: 10px;
+    width: 50%;
+    float: left;
+    padding: 0;
+    margin: 0;
     display: inline-block;
-    background-color: blue;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+}
+.btn:hover {
+    cursor: pointer;
+}
+
+.options {
+    height: 300px;
+    width: 600px;
+    background-color: white;
+    display: inline-block;
+}
+
+.active {
+    background-color: #263A55;
+    color: white;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.active:hover {
+    background-color: #57CB88;
+    color: black;
+}
+.user {
+    background-color: white;
+    height: 300px;
+    width: 100px;
+    display: inline-block;
+}
+.row {
+    min-width: 100%;
 }
