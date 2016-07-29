@@ -1,0 +1,38 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #0086b3;
+}
+.wraper {
+    background-color: white;
+    max-width: 970px;
+    min-height: 400px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+header {
+    min-height: 60px;
+    min-width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+nav {
+    min-height: 100%;
+    min-width: 50%;
+    display: inline-block;
+}
+.btn {
+    min-height: 40px;
+    min-width: 80px;
+    margin: 10px;
+    display: inline-block;
+    background-color: blue;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
