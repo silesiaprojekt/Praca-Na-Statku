@@ -1,2 +1,2 @@
-# Praca-Na-Statku
+# Praca na statku
 Innovative Web Application
