@@ -21,7 +21,7 @@
         <header>
             <nav>
                 <ul class="main">
-                    <li><a href="#">certyfikaty</a></li>
+                    <li><a href="#">kursy</a></li>
                     <li><a href="#">finanse</a></li>
                     <li><a href="#">armatorzy</a></li>
                 </ul>
@@ -37,20 +37,69 @@
     <div class="row">
         <div class="news">
             <div class="buttons">
-            <div class="btn"><p>Aktualności</p></div>
-            <div class="btn active"><p>Wiadomości</p></div>
+            <div class="btn active" data-id="new"><p>Aktualności</p></div>
+            <div class="btn in-active" data-id="mail"><p>Wiadomości</p></div>
             </div>
-
+            <div class="news-container">
+            <div class="new" id="new">
+                <ul>
+                    <li>
+                        <p><i class="fa fa-support" aria-hidden="true"></i> Kolizja tankowców na Morzu Północnym.</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-briefcase" aria-hidden="true"></i> Brazilian Tour Agent Ltd. pilnie poszukuje stewardów na trasie Miami - Helsinki.</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-bar-chart" aria-hidden="true"></i> Norge Tankers Co. dzięki podpisaniu kontraktu na dostawy ropy do Niemiec poprawili wyniki finansowe spółki.</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-wrench" aria-hidden="true"></i> Duńczycy poszukują mechaników.</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-ship" aria-hidden="true"></i> Marine Traffic Ltd. rozpoczęli budowę nowego supertankowca.</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-recycle" aria-hidden="true"></i> Zeszłoroczny wyciek ropy w porcie w Amsterdamie był wynikiem wielu zaniedbań ze strony armatora Asian Sea Co.</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="mail not-display" id="mail">
+                <ul>
+                    <li>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i> Cześć! Chciałbym pogadać</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i> Nowe oferty pracy</p>
+                        <p class="not-display">Praesent commodo porta ex eu accumsan. Integer malesuada tortor et ante dignissim aliquam nec nec sapien. Maecenas id dolor ligula. </p>
+                    </li>
+                </ul>
+            </div>
+            </div>
         </div>
         <div class="user">
-            <div class="details">
+            <div class="user-container">
+            <div class="details" id="ty">
                 <img src="img/avatar.jpg">
-                <p>Krzysiek<br>Stanowisko: Fitter</p>
+                <p>Krzysiek<br>Fitter</p>
+            </div>
+            <div class="position not-display" id="stanowisko">
+                2
+            </div>
+            <div class="company not-display" id="armator">
+                3
+            </div>
             </div>
             <div class="panel">
-                <div class="btn"><p>Ty</p></div>
-                <div class="btn active"><p>Stanowisko</p></div>
-                <div class="btn active"><p>Armator</p></div>
+                <div class="btn active" data-id="ty"><p>Ty</p></div>
+                <div class="btn in-active" data-id="stanowisko"><p>Stanowisko</p></div>
+                <div class="btn in-active" data-id="armator"><p>Armator</p></div>
             </div>
         </div>
     </div>
@@ -75,10 +124,18 @@
 <!--FOOTER---------------------------------------------------------------->
     <div class="row">
         <footer>
-            <p>Realizacja: Silesiaprojekt</p>
+            <div class="company">
+                <a href="http://silesiaprojekt.pl" target="_blank"><p>Silesiaprojekt | 20016</p></a>
+            </div>
+            <div class="media">
+                <a href="https://www.youtube.com/c/pracanastatkuvlogi" target="_blank"><img src="img/youtube.png"></a>
+                <a href="https://www.facebook.com/zycieipracanastatku" target="_blank"><img src="img/facebook.png"></a>
+                <a href="mailto:pracowacnastatku@gmail.com"><img src="img/mail.png"></a>
+            </div>
         </footer>
     </div>
 </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 <html>

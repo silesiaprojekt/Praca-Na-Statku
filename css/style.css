@@ -23,9 +23,47 @@ body {
     display: -ms-flexbox;
     display: flex;
 }
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+.not-display {
+    display: none;
+}
+.display-it {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.in-active {
+    background-color: #263A55;
+    color: white;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.in-active:hover {
+    background-color: #57CB88;
+    color: black;
+}
+.active {
+    background: white;
+    color: black;
+}
 /*--BOARD--------------------------------------------------*/
 .board {
-    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     max-width: 100%;
     margin: 10px;
 }
@@ -57,6 +95,11 @@ header nav ul {
     height: 100%;
     padding: 0;
     margin: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+header nav ul:last-of-type {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -78,8 +121,11 @@ header nav .main li {
     -webkit-transition: all 0.6s;
     transition: all 0.6s;
 }
+header nav .main li:last-of-type {
+    border-right: 0px;
+}
 header nav .main li:hover {
-    background-color: #57CB88;
+    color: #57CB88;
 }
 header nav .main li a {
     text-decoration: none;
@@ -155,6 +201,10 @@ header nav .aside li a i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
 }
 .news .buttons {
     width: 100%;
@@ -172,15 +222,54 @@ header nav .aside li a i {
 .news .buttons .btn:hover {
     cursor: pointer;
 }
-.news .buttons .active {
-    background-color: #263A55;
-    color: white;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+.news-container {
+    width: 600px;
+    height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
-.news .buttons .active:hover {
-    background-color: #57CB88;
-    color: black;
+.new {
+    width: 600px;
+    height: 250px;
+    overflow: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.new ul {
+    margin: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+.new li p:first-of-type:hover {
+    cursor: pointer;
+    color: #57CB88;
+}
+.new li p:nth-child(2) {
+    font-style: italic;
+    font-size: 12px;
+    margin-left: 25px;
+}
+.mail {
+    width: 600px;
+    height: 250px;
+    overflow: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.mail ul {
+    margin: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+.mail li p:first-of-type:hover {
+    cursor: pointer;
+    color: #57CB88;
+}
+.mail li p:nth-child(2) {
+    font-style: italic;
+    font-size: 12px;
+    margin-left: 25px;
 }
 .user {
     height: 300px;
@@ -195,6 +284,9 @@ header nav .aside li a i {
     -ms-flex-direction: column;
     flex-direction: column;
 }
+.user-container {
+
+}
 .user .details {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -203,7 +295,7 @@ header nav .aside li a i {
     margin-right: auto;
     padding: 20px;
     width: 270px;
-    height: 220px;
+    height: 210px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -231,6 +323,14 @@ header nav .aside li a i {
 .user .details p {
     text-align: center;
 }
+.user .position {
+    background: yellow;
+    height: 250px;
+}
+.user .company {
+    height: 250px;
+    background: red;
+}
 .user .panel {
     width: 100%;
     height: 50px;
@@ -251,16 +351,6 @@ header nav .aside li a i {
 }
 .user .panel .btn:hover {
     cursor: pointer;
-}
-.user .panel .active {
-    background-color: #263A55;
-    color: white;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-}
-.user .panel .active:hover {
-    background-color: #57CB88;
-    color: black;
 }
 /*--SECOND-ROW--------------------------------------------------*/
 .content {
@@ -299,9 +389,32 @@ header nav .aside li a i {
 }
 /*--FOOTER--------------------------------------------------*/
 footer {
-    background: white;
-    height: 50px;
+    height: 48px;
     width: 100%;
     margin: 10px;
-    font-size: 12px;
+    text-transform: uppercase;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+}
+footer a:hover {
+    color: #57CB88;
+}
+footer a p {
+    font-size: 15px;
+}
+footer img {
+    padding-left: 5px;
+}
+footer img:hover {
+    cursor: pointer;
 }
