@@ -324,12 +324,29 @@ header nav .aside li a i {
     text-align: center;
 }
 .user .position {
-    background: yellow;
+    height: 250px;
+    text-align: center;
+}
+.user .position p {
+    margin: 0;
+    padding-top: 10px;
+}
+.user .position h4 {
+    margin: 0;
+}
+.user .company {
     height: 250px;
 }
 .user .company {
     height: 250px;
-    background: red;
+    text-align: center;
+}
+.user .company p {
+    margin: 0;
+    padding-top: 10px;
+}
+.user .company h4 {
+    margin: 0;
 }
 .user .panel {
     width: 100%;
