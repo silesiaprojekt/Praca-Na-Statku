@@ -21,21 +21,44 @@
         <header>
             <nav>
                 <ul class="main">
-                    <li><a href="#">certyfikaty</a></li>
-                    <li><a href="#">finanse</a></li>
-                    <li><a href="#">armatorzy</a></li>
+                    <li data-id="home"><a href="#">home</a></li>
+                    <li data-id="finanse"><a href="#">finanse</a></li>
+                    <li data-id="certyfikaty"><a href="#">certyfikaty</a></li>
+                    <li data-id="armatorzy"><a href="#">armatorzy</a></li>
                 </ul>
                 <ul class="aside">
-                    <li><a href="#"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;opcje</li>
-                    <li><a href="#"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;pomoc</li>
-                    <li><a href="#"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></i></a>&nbsp;&nbsp;wyloguj</li>
+                    <li id="opt"><a href="#"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;opcje</li>
+                    <li id="help"><a href="#"><i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;pomoc</li>
+                    <li id="log-off"><a href="#"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></i></a>&nbsp;&nbsp;wyloguj</li>
                 </ul>
             </nav>
         </header>
     </div>
 <!--FIRST-ROW---------------------------------------------------------------->
     <div class="row">
-        <div class="news">
+            <!--HIDDEN-LAYER----------------------------------------------->
+                <div class="finanse" id="finanse">
+                    finanse
+                </div>
+                <div class="certyfikaty" id="certyfikaty">
+                    certyfikaty
+                </div>
+                <div class="armatorzy" id="armatorzy">
+                    armatorzy
+                </div>
+                <div class="opt">
+                </div>
+                <div class="help">
+                    <div class="help-content">
+                        <ul>
+                            <li data-id="home"><a href="#">na czym to polega?</a></li>
+                            <li data-id="finanse"><a href="#">jak grać?</a></li>
+                            <li><i class="fa fa-times fa-2x" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            <!--HIDDEN-LAYER----------------------------------------------->
+        <div class="news" id="home">
             <div class="buttons">
             <div class="btn active" data-id="new"><p>Aktualności</p></div>
             <div class="btn in-active" data-id="mail"><p>Wiadomości</p></div>
@@ -111,7 +134,7 @@
             </div>
             </div>
             <div class="panel">
-                <div class="btn active" data-id="ty"><p>Ty</p></div>
+                <div class="btn in-active" data-id="ty"><p>Ty</p></div>
                 <div class="btn in-active" data-id="stanowisko"><p>Kariera</p></div>
                 <div class="btn in-active" data-id="armator"><p>Armator</p></div>
             </div>

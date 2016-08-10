@@ -22,6 +22,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
 }
 ::-webkit-scrollbar-track {
     background-color: #eaeaea;
@@ -114,12 +115,12 @@ header nav .main {
 }
 header nav .main li {
     text-transform: uppercase;
-    border-right: 1px solid lightgray;
     font-size: 18px;
     padding-left: 10px;
     padding-right: 10px;
     -webkit-transition: all 0.6s;
     transition: all 0.6s;
+    border-right: 1px solid lightgray;
 }
 header nav .main li:last-of-type {
     border-right: 0px;
@@ -191,6 +192,104 @@ header nav .aside li a {
 }
 header nav .aside li a i {
 
+}
+.finanse {
+    background-color: white;
+    height: 300px;
+    width: 930px;
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+.certyfikaty {
+    background-color: white;
+    height: 300px;
+    width: 930px;
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+.armatorzy {
+    background-color: white;
+    height: 300px;
+    width: 930px;
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+.opt {
+    background-color: #489c63;
+    height: 300px;
+    width: 930px;
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+.help {
+    background-color: #dfbb41;
+    height: 300px;
+    width: 930px;
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.help-content {
+    height: 50px;
+    width: 100%;
+    background: white;
+}
+.help-content ul {
+    list-style-type: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+}
+.help-content ul li {
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+}
+.help-content ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+.help-content ul li a:hover {
+
+}
+.help i {
+    color: black;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+}
+.help i:hover {
+    color: red;
+    cursor: pointer;
 }
 /*--FIRST-ROW--------------------------------------------------*/
 .news {

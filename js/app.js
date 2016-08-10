@@ -1,15 +1,23 @@
 $(document).ready(function(){
 
+
      $(".buttons .btn").click(function(){
 
          var $element = $(this).data("id");
-         $(this).toggleClass("active").prev("div .btn").toggleClass("no-active");
 
          $("#" + $element).prev("div").hide();
          $("#" + $element).next("div").hide();
          $("#" + $element).fadeIn();
 
+
     });
+
+
+    $(".buttons .btn").click(function(){
+
+        $(this).addClass("active");
+
+});
 
 
     $("#mail p").click(function(){
@@ -22,17 +30,60 @@ $(document).ready(function(){
 
      $(".panel .btn").click(function(){
 
+         $(".panel .btn").first().addClass("active");
          var $element = $(this).data("id");
-         $(this).toggleClass("active").prev("div .btn").toggleClass("no-active");
+         $(this).addClass("active").prev("div .btn").removeClass("in-active");
 
-         $("#" + $element).prev("div").hide();
-         $("#" + $element).next("div").hide();
+         $("#" + $element).prevAll("div").hide();
+         $("#" + $element).nextAll("div").hide();
          $("#" + $element).fadeIn();
 
     });
 
 
 
+     $(".opt").addClass("not-display");
+    $("#opt").click(function(){
+       $(".opt").fadeToggle("display-it");
+    });
+
+    $(".help").addClass("not-display");
+    $("#help").click(function(){
+       $(".help").fadeToggle("display-it");
+    });
+
+
+
+    $("#log-off").click(function(){
+        alert("To jest wersja demo, nie można się wylogować!")
+    })
+
+
+
+
+
+
+    $(".help i").click(function(){
+        $(".help").hide();
+    });
+
+    $(".opt i").click(function(){
+        $(".opt").hide();
+    });
+
+
+    $(".finanse").addClass("not-display");
+    $(".certyfikaty").addClass("not-display");
+    $(".armatorzy").addClass("not-display");
+
+    $(".main li").click(function(){
+
+
+         var $element = $(this).data("id");
+        $("#" + $element ).addClass("display-it")
+
+
+    });
 
     /*
 
